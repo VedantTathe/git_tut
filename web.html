@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- STYLE TAG -->
+    <style>
+        img.one{
+            float: center;
+            height: 140px;
+        }
+        h2{
+            text-align: left;
+            margin-top: -7%;
+            margin-left: 6%;
+        }
+        h3{
+            text-align: center;
+            margin-left: 80%;
+        }
+        .navbar{
+            background-color: skyblue;
+            border-radius: 20px;
+            margin-top: 6%;
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float: left;
+            list-style: none;
+            margin: 12px 20px;
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: black;
+            font-size: large;
+            font-style:oblique;
+            
+        }
+        .navbar li a:hover{
+            color:whitesmoke;
+        }
+        .search{
+            float: right;
+            color: black;
+            padding: 12px 70px;
+        }
+        .navbar input{
+            border: 2px black;
+            border-radius: 10px;
+            padding: 3px 5px;
+        }
+
+        .slider-box{
+            width: 70%;
+            height: 400px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background-image: url('https://grouponemedical.com.au/wp-content/uploads/2021/01/doctor-slider-900.jpg');
+            background-size: 100% 100%;
+            box-shadow: 1px 2px 10px 5px gray;
+            animation: slider 18s infinite linear;
+        }
+
+        @keyframes slider{
+            0%{background-image: url('https://grouponemedical.com.au/wp-content/uploads/2021/01/doctor-slider-900.jpg');}
+            35%{background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1468&q=80'); }
+            75%{ background-image: url('https://www.queenswaymedicalcentre.nhs.uk/media/content/images/doctor.jpg');}
+        }
+        
+        .about{
+            margin-top: 30%;
+        }
+
+        .appointment{
+            margin-top: 5%;
+        }
+        /* footer */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body{
+            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            max-width: 1170px;
+            margin: auto;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        ul{
+            list-style: none;
+        }
+        .footer{
+            background-color: rgb(92, 145, 201);
+            padding: 70px 0;
+        }
+        .footer-col{
+            width: 25%;
+            padding: 0 15px;
+        }
+        .footer-col h4{
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+        .footer-col h4::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+        .footer-col ul li:not(:last-child){
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #c4bdbd;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover{
+            color: #ffffff;
+            padding-left: 8px;
+        }
+        .footer-col .social-links a{
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255,255,255,0.2);
+            margin:0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s  ease;
+        }
+        .footer-col .social-links a:hover{
+            color: #24262b;
+            background-color: #ffffff;
+        }
+        /* responsive */
+        @media(max-width:767px){
+            .footer-col{
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+        @media(max-width:574px){
+            .footer-col{
+                width: 100%;
+            }
+        }
+    </style>
+    <!-- css link -->
+    <link rel="stylesheet" href="clinic.css">
+</head>
+<body>
+    <!-- IMAGE LINK -->
+<img class="one" src="https://www.clipartkey.com/mpngs/m/138-1387924_registered-nurse-logo-png.png"  alt="Doctor's symbol">
+    <h2>Dr. AKSHAY MAHURE's CLINIC</h2>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Book an appointment</a></li>
+                <li><a href="#">Contact us</a></li>
+                <div class="search"><input type="text" name="search" id="search" placeholder="search"></div>
+            </ul>
+        </nav>
+    </header>
+    <!-- image slider -->
+    <div class="slider-box"></div>
+    <h1 class="about">About doctor</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat vitae omnis quisquam ad eius culpa libero? Accusantium illo, eaque ullam incidunt nesciunt qui. Corrupti deleniti non iusto autem quaerat explicabo.</p>
+
+    <h1 class="appointment">Book an appointment</h1>
+
+    <div>
+        <span>
+        <label for="name">Name of patient:</label>
+        <input type="text"Name="my name=" id="name">
+        <label for="Age">Age:</label>
+        <input type="number"Name="my name=" id="Age">
+    </span>
+        <br>
+        <br>
+        <span>
+        <label for="Address">Address:</label>
+        <input type="text"Name="my name=" id="Address">
+        <label for="phone_no">phone no:</label>
+        <input type="number"Name="my name="id="phone_no">
+    </span>
+
+    <br>
+    <br>
+        <label for="write">Patient condition in details:</label>
+        <div>
+            <textarea name="" id=""  cols="50" rows="10"></textarea>
+        </div>
+    </ol>
+    <br>
+    
+    <span>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Clear form">
+</span>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Clinic</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Book an appointment</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Clinic timing</h4>
+                <h5>Address</h5>
+            </div>
+            <div class="footer-col">
+                <h4>Contact us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
